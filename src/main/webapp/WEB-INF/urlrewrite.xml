@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+    <!--自定义匹配-->
+    <rule>
+        <from>/index/index.html</from>
+        <to type="forward">/views/index.jsp</to>
+    </rule>
+    　　<rule>
+        　　　　<note>重写loign.jsp成login.html</note>
+        　　　　<!-- 对应controller中redireact的路径 -->
+        　　　　<from>login.html</from>
+        　　　　<!-- 对应实际工程中jsp文件 -->
+        　　　　<to type="forward">/login.jsp</to>
+        　　</rule>
+
+    <rule>
+        <from>^/views/users/users/(.+).html$</from>
+        <to>/views/users/users.html</to>
+    </rule>
+
+</urlrewrite>
